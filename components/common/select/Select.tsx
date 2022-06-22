@@ -1,27 +1,36 @@
-export interface SelectProps {
+import { HTMLAttributes } from "react";
+
+export interface SelectProps extends HTMLAttributes<HTMLSelectElement> {
   label?: string;
-  disabled?: boolean;
-  id?: string;
-  onChange?: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  value?: any;
+  readOnly?: boolean;
 }
 
-const Select = (props: React.PropsWithChildren<SelectProps>) => {
+const Select = ({
+  children,
+  className,
+  label,
+  ...selectProps
+}: React.PropsWithChildren<SelectProps>) => {
   return (
-    <>
-      {props.label && (
+    <div className={className}>
+      {label && (
         <label className="block mb-2 text-sm font-medium text-gray-900">
-          {props.label}
+          {label}
         </label>
       )}
       <select
-        id={props.id}
-        onChange={props.onChange}
-        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 inline-block p-2.5 w-max"
+        {...selectProps}
+        className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 inline-block p-2.5 w-full"
       >
-        {props.children}
+        {children}
       </select>
-    </>
+    </div>
   );
+};
+
+Select.defaultProps = {
+  readOnly: false,
 };
 
 export default Select;

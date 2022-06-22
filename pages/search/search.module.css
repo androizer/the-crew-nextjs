@@ -1,0 +1,14 @@
+.backgroundImageContainer {
+  @apply relative;
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  @apply h-[550px];
+  @apply w-full;
+  @apply bg-no-repeat;
+  @apply bg-cover;
+  @apply bg-center;
+  @apply bg-blend-darken;
+  @apply bg-[#00000070];
+  background-image: url("/images/search/hardware-tools.jpg");
+}

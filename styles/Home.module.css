@@ -14,7 +14,6 @@
 .titleRootContainer {
   @apply flex;
   @apply flex-col;
-  @apply h-full;
   @apply text-white;
   @apply gap-y-8;
   background: linear-gradient(90deg, transparent, #2b2623de 30%);

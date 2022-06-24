@@ -76,7 +76,7 @@ const Avatar = ({
   return (
     <>
       <div
-        className="h-[50px] w-[50px] relative cursor-pointer"
+        className="relative cursor-pointer avatar-md"
         title={`${session.user!.name!} | Click to Logout`}
       >
         <Image

@@ -1,6 +1,5 @@
 .bannerContainer {
-  @apply flex;
-  @apply flex-row-reverse;
+  @apply flex flex-row-reverse;
   min-height: 500px;
   max-height: 500px;
   background-repeat: no-repeat;
@@ -12,11 +11,7 @@
 }
 
 .titleRootContainer {
-  @apply flex;
-  @apply flex-col;
-  @apply h-full;
-  @apply text-white;
-  @apply gap-y-8;
+  @apply flex flex-col text-white gap-y-8;
   background: linear-gradient(90deg, transparent, #2b2623de 30%);
   padding: 32px 32px 0 32px;
   width: 50%;
